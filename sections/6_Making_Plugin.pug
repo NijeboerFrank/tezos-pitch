@@ -1,9 +1,44 @@
 section 
-    +gradientH1 Making The plugin
+    h2 Making a Presto Plugin 🚧
+section 
+  h2
+    +SelectedSpan("No Documentation")
+
++iFrameBackground("https://prestodb.io/docs/current/develop/connectors.html")
+
+section 
+    +gradientH2 
+        | So we tried
+
 section
-    +gradientH2 The steps we took
-    p Got ethereum plugin working 
-    p learned how the ethereum plugin works
-    p close to zero documentation!
-    p rewriting for Tezos API (tzstats)
-    p adding as many usages as possible in timeslot
+    h1 First steps
+    .fragment Refactor Ethereum Plugin
+    .fragment Learn How it Works
+
+section 
+    h2 
+        +SelectedSpan("But now we need data...")
+
++iFrameBackground("https://github.com/blockwatch-cc/tzindex")
+
++iFrameBackground("https://tzstats.com/docs/api#tezos-api")
+
+section 
+    h2 
+        | Now we only need to call this API, right?
+
+section 
+    +gradientH2 No 
+    .fragment Need to write splits to query data efficiently
+    .fragment Need to create links to make Presto aware of the data 
+    .fragment Create ranges to prevent accidentally querying everything
+    .fragment Etc.
+
++iFrameBackground("https://github.com/NijeboerFrank/presto-tezos")
+
+section 
+    h2 Current State ✅
+    .fragment Blocks 
+    .fragment Operations
+    .fragment Contracts 
+    .fragment Elections & Proposals
